@@ -1,0 +1,62 @@
+.vis-hid {
+  visibility: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --main-color: rgb(213, 87, 87);
+  color-scheme: dark;
+  font-size: 11.25px;
+  color: var(--main-color);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  height: 100dvh;
+  width: 100dvw;
+  background: center / cover no-repeat url("imgs/bg.jpg");
+  position: relative;
+  text-align: center;
+  user-select: none;
+  font-family: sans-serif;
+  overflow: hidden;
+  color: var(--main-color);
+}
+
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 22, 22, 0.65);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  height: 80dvh;
+}
+
+#clock {
+  font-size: clamp(2rem, 30dvw, 20rem);
+  text-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#meridiem {
+  font-size: 0.3em;
+}
